@@ -12,7 +12,7 @@ class SorteioNumeros {
     private void sortearNumeros() {
         Random random = new Random();
         for (int i = 0; i < 5; i++) {
-            int numero = random.nextInt(50) + 1; // Sorteia um número de 1 a 50
+            int numero = random.nextInt(50) + 1;
             numerosSorteados.add(numero);
         }
     }
@@ -29,11 +29,11 @@ class SorteioNumeros {
         ArrayList<Integer> apostaSurpresa = new ArrayList<>();
         Random random = new Random();
         for (int i = 0; i < 5; i++) {
-            int numero = random.nextInt(50) + 1; // Sorteia um número de 1 a 50
+            int numero = random.nextInt(50) + 1;
             apostaSurpresa.add(numero);
         }
-        // Sorteio do número extra
-        int numeroExtra = random.nextInt(50) + 1; // Sorteia um número de 1 a 50
+        // Sorteio do número extra - necessário?
+        int numeroExtra = random.nextInt(50) + 1;
         apostaSurpresa.add(numeroExtra);
         return apostaSurpresa;
     }

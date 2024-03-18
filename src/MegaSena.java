@@ -2,13 +2,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MegaSena {
-    private static final int MAX_TENTATIVAS = 25;
+    private static final int MAX_TENTATIVAS = 25; // 25 tentativas para ganhar
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Bem-vindo à Mega Sena!");
 
+        // menu de opções
         int opcao;
         do {
             System.out.println("\nMenu:");
@@ -28,9 +29,10 @@ public class MegaSena {
         } while (opcao != 0);
     }
 
+    // parte das apostas - validar os nros apostados e quantidade de tentativa
     private static void fazerNovaAposta(Scanner scanner) {
         System.out.print("Digite seu nome: ");
-        scanner.nextLine(); // Consumir a quebra de linha pendente
+        scanner.nextLine();
         String nome = scanner.nextLine();
         System.out.print("Digite seu CPF: ");
         String cpf = scanner.nextLine();
@@ -58,6 +60,7 @@ public class MegaSena {
         }
     }
 
+    // iniciar nova aposta se a anterior perdeu
     private static ArrayList<Integer> solicitarAposta(Scanner scanner) {
         ArrayList<Integer> aposta = new ArrayList<>();
         System.out.println("\nFaça sua aposta:");
