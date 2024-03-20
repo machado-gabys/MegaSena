@@ -32,7 +32,6 @@ class SorteioNumeros {
             int numero = random.nextInt(50) + 1;
             apostaSurpresa.add(numero);
         }
-        // Sorteio do número extra - necessário?
         int numeroExtra = random.nextInt(50) + 1;
         apostaSurpresa.add(numeroExtra);
         return apostaSurpresa;

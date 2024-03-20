@@ -50,9 +50,9 @@ public class Apostas {
 
         // Verificar se o jogador ganhou
         if (megaSena.verificarAposta(apostaSurpresa)) {
-            System.out.println("Parabéns, " + nome + "! Você ganhou na aposta surpresa!");
+            System.out.println("Parabéns, " + nome + "! Aposta surpresa ganhou! Você agora é um milionário");
         } else {
-            System.out.println("Que pena, " + nome + ". Você não ganhou na aposta surpresa.");
+            System.out.println("Que pena, " + nome + ". Não foi dessa vez...");
         }
     }
 
@@ -66,7 +66,7 @@ public class Apostas {
                 System.out.print("Digite o número " + (i + 1) + ": ");
                 numero = scanner.nextInt();
                 if (numero < 1 || numero > 50) {
-                    System.out.println("Número inválido. Deve estar no intervalo de 1 a 50.");
+                    System.out.println("Número inválido. O número dever ser de 1 a 50.");
                 } else if (aposta.contains(numero)) {
                     System.out.println("Número já escolhido. Escolha outro número.");
                 } else {
@@ -91,9 +91,9 @@ public class Apostas {
         megaSena.mostrarNumerosSorteados();
 
         if (megaSena.verificarAposta(aposta)) {
-            System.out.println("Parabéns, " + usuario.getNome() + "! Você acertou!");
+            System.out.println("Parabéns, " + usuario.getNome() + "! Você agora é um milionário!");
         } else {
-            System.out.println("Que pena, " + usuario.getNome() + ". Você não acertou.");
+            System.out.println("Puxa, " + usuario.getNome() + ". não foi dessa vez que você conseguiu...");
 
             System.out.println("\nRealizando nova aposta...");
             ArrayList<Integer> novaAposta = solicitarAposta(new Scanner(System.in));
@@ -101,7 +101,7 @@ public class Apostas {
                 verificarResultado(usuario, novaAposta, megaSena);
             } else {
                 System.out.println(
-                        "Aposta inválida. Os números devem estar no intervalo de 1 a 50 e não devem se repetir.");
+                        "Aposta inválida. Os números devem ser de 1 a 50.");
             }
         }
     }
